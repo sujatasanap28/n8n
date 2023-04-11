@@ -14,6 +14,6 @@ You can can open N8N UI here:
 
     URL: https://[CI_CD_DOMAIN]
     login: root
-    password: [ADMIN_PASSWORD]
+    password: [SOFTWARE_PASSWORD]
 
 More information about N8N usage can also be found in the documentation.: https://docs.n8n.io/
