@@ -1,0 +1,25 @@
+version: "3"
+services:
+  n8n:
+    image: n8nio/n8n:${SOFTWARE_VERSION_TAG}
+    restart: always
+    environment:
+      N8N_BASIC_AUTH_ACTIVE: "true"
+      N8N_BASIC_AUTH_USER: ${N8N_BASIC_AUTH_USER}
+      N8N_BASIC_AUTH_PASSWORD: ${SOFTWARE_PASSWORD}
+      N8N_HOST: [DOMAIN]
+      N8N_EMAIL_MODE: "smtp"
+      N8N_SMTP_HOST: ${SMTP_HOST}
+      N8N_SMTP_PORT: ${SMTP_PORT}
+      N8N_SMTP_USER: " "
+      N8N_SMTP_PASS: " "
+      N8N_SMTP_SENDER: "[DOMAIN]@vm.elestio.app"
+      N8N_SMTP_SSL: "false"
+      WEBHOOK_TUNNEL_URL: https://[DOMAIN]
+    ports:
+      - 172.17.0.1:5678:5678
+    dns:
+      - 8.8.8.8
+
+    volumes:
+      - ./.n8n:/home/node/.n8n
