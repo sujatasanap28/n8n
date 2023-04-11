@@ -24,8 +24,8 @@ environments:
   - key: "SMTP_PORT"
     value: "25"
   - Key: "N8N_BASIC_AUTH_USER"
-   value: "root"
-  
+    value: "root"
+
 config:
   runTime: "dockerCompose"
   version: ""
