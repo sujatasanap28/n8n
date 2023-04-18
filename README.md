@@ -10,7 +10,7 @@ Deploy N8N server with CI/CD on Elestio
 
 # Once deployed ...
 
-You can can open N8N UI here:
+You can open N8N UI here:
 
     URL: https://[CI_CD_DOMAIN]
     login: root
